@@ -85,25 +85,25 @@ class FallTemplateBot2026(ForecastBot):
         ...
         llms={
             "default": GeneralLlm(
-                model="groq/llama-3.3-70b-versatile",
+                model="groq/openai/gpt-oss-120b",
                 temperature=0.3,
                 timeout=90,
                 allowed_tries=4,
             ),
             "summarizer": GeneralLlm(
-                model="groq/llama-3.1-8b-instant",
+                model="groq/openai/gpt-oss-20b",
                 temperature=0.2,
                 timeout=60,
                 allowed_tries=4,
             ),
             "researcher": GeneralLlm(
-                model="groq/llama-3.1-8b-instant",
+                model="groq/qwen/qwen3.8-27b",
                 temperature=0.2,
                 timeout=60,
                 allowed_tries=4,
             ),
             "parser": GeneralLlm(
-                model="groq/llama-3.1-8b-instant",
+                model="groq/openai/gpt-oss-20b",
                 temperature=0.0,
                 timeout=60,
                 allowed_tries=4,
@@ -732,25 +732,25 @@ if __name__ == "__main__":
         extra_metadata_in_explanation=True,
         llms={
             "default": GeneralLlm(
-                model="groq/llama-3.3-70b-versatile",
+                model="groq/openai/gpt-oss-120b",
                 temperature=0.3,
                 timeout=90,
                 allowed_tries=4,
             ),
             "summarizer": GeneralLlm(
-                model="groq/llama-3.1-8b-instant",
+                model="groq/openai/gpt-oss-20b",
                 temperature=0.2,
                 timeout=60,
                 allowed_tries=4,
             ),
             "researcher": GeneralLlm(
-                model="groq/llama-3.1-8b-instant",
+                model="groq/qwen/qwen3.8-27b",
                 temperature=0.2,
                 timeout=60,
                 allowed_tries=4,
             ),
             "parser": GeneralLlm(
-                model="groq/llama-3.1-8b-instant",
+                model="groq/openai/gpt-oss-20b",
                 temperature=0.0,
                 timeout=60,
                 allowed_tries=4,
