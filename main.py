@@ -83,16 +83,31 @@ class FallTemplateBot2026(ForecastBot):
     ```python
     my_bot = MyBot(
         ...
-        llms={  # choose your model names or GeneralLlm llms here, otherwise defaults will be chosen for you
+        llms={
             "default": GeneralLlm(
-                model="openrouter/openai/gpt-4o", # "anthropic/claude-sonnet-4-20250514", etc (see docs for litellm)
+                model="openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
                 temperature=0.3,
-                timeout=40,
-                allowed_tries=2,
+                timeout=90,
+                allowed_tries=3,
             ),
-            "summarizer": "openai/gpt-4o-mini",
-            "researcher": "asknews/news-summaries",
-            "parser": "openai/gpt-4o-mini",
+            "summarizer": GeneralLlm(
+                model="openrouter/google/gemma-4-26b-a4b-it:free",
+                temperature=0.2,
+                timeout=60,
+                allowed_tries=3,
+            ),
+            "researcher": GeneralLlm(
+                model="openrouter/google/gemma-4-31b-it:free",
+                temperature=0.2,
+                timeout=60,
+                allowed_tries=3,
+            ),
+            "parser": GeneralLlm(
+                model="openrouter/google/gemma-4-26b-a4b-it:free",
+                temperature=0.0,
+                timeout=60,
+                allowed_tries=3,
+            ),
         },
     )
     ```
