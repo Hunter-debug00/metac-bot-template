@@ -724,7 +724,7 @@ if __name__ == "__main__":
     # uncomment and edit to pin specific models.
     template_bot = FallTemplateBot2026(
         research_reports_per_question=1,
-        predictions_per_research_report=5,
+        predictions_per_research_report=1,
         use_research_summary_to_forecast=False,
         publish_reports_to_metaculus=publish_to_metaculus,
         folder_to_save_reports_to=None,
@@ -734,30 +734,29 @@ if __name__ == "__main__":
             "default": GeneralLlm(
                 model="groq/openai/gpt-oss-120b",
                 temperature=0.3,
-                timeout=90,
-                allowed_tries=4,
+                timeout=120,
+                allowed_tries=8,
             ),
             "summarizer": GeneralLlm(
                 model="groq/openai/gpt-oss-20b",
                 temperature=0.2,
-                timeout=60,
-                allowed_tries=4,
+                timeout=90,
+                allowed_tries=8,
             ),
             "researcher": GeneralLlm(
-                model="groq/qwen/qwen3.8-27b",
+                model="groq/openai/gpt-oss-20b",
                 temperature=0.2,
-                timeout=60,
-                allowed_tries=4,
+                timeout=90,
+                allowed_tries=8,
             ),
             "parser": GeneralLlm(
                 model="groq/openai/gpt-oss-20b",
                 temperature=0.0,
-                timeout=60,
-                allowed_tries=4,
+                timeout=90,
+                allowed_tries=8,
             ),
         },
     )
-
     # Per-mode tournament URL shown in the summary banner footer. These
     # piggyback on the forecasting_tools SDK constants and need updating
     # whenever those rotate seasons.
