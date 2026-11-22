@@ -85,25 +85,25 @@ class FallTemplateBot2026(ForecastBot):
         ...
         llms={
             "default": GeneralLlm(
-                model="openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+                model="gemini/gemini-2.5-flash",
                 temperature=0.3,
                 timeout=90,
                 allowed_tries=4,
             ),
             "summarizer": GeneralLlm(
-                model="openrouter/openrouter/free",
+                model="gemini/gemini-2.5-flash",
                 temperature=0.2,
                 timeout=60,
                 allowed_tries=4,
             ),
             "researcher": GeneralLlm(
-                model="openrouter/nvidia/nemotron-3.5-super-vl:free",
+                model="gemini/gemini-2.5-flash",
                 temperature=0.2,
                 timeout=60,
                 allowed_tries=4,
             ),
             "parser": GeneralLlm(
-                model="openrouter/openrouter/free",
+                model="gemini/gemini-2.5-flash",
                 temperature=0.0,
                 timeout=60,
                 allowed_tries=4,
@@ -732,25 +732,25 @@ if __name__ == "__main__":
         extra_metadata_in_explanation=True,
         llms={
             "default": GeneralLlm(
-                model="openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+                model="gemini/gemini-2.5-flash",
                 temperature=0.3,
                 timeout=90,
                 allowed_tries=4,
             ),
             "summarizer": GeneralLlm(
-                model="openrouter/openrouter/free",
+                model="gemini/gemini-2.5-flash",
                 temperature=0.2,
                 timeout=60,
                 allowed_tries=4,
             ),
             "researcher": GeneralLlm(
-                model="openrouter/nvidia/nemotron-3.5-super-vl:free",
+                model="gemini/gemini-2.5-flash",
                 temperature=0.2,
                 timeout=60,
                 allowed_tries=4,
             ),
             "parser": GeneralLlm(
-                model="openrouter/openrouter/free",
+                model="gemini/gemini-2.5-flash",
                 temperature=0.0,
                 timeout=60,
                 allowed_tries=4,
